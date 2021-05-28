@@ -42,15 +42,15 @@ class DatosActualizadosEmail extends React.Component {
         
         this.setState({
             usuario: {
-               // idUsuario: cookies.get('idUsuario'),
+                idUsuario: cookies.get('idUsuario'),
                
                 password: this.contraseñaRef.current.value,
                 
                 password2: this.nuevaContraseñaRef.current.value,
 
                 confirmPassword:this.confirmarNuevaContraseña.current.value,
-                idUsuario: 95,
-                // idUsuario: cookies.get('idUsuario'),
+              
+                 idUsuario: cookies.get('idUsuario'),
 
             },
        

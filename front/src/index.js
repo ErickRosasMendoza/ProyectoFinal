@@ -99,7 +99,7 @@ ReactDOM.render(
                 <Route exact path="/doc/PdfLiberacion/:doc" component={PdfLiberacion}/>
                 <Route exact path="/doc/PdfServicio/:doc" component={PdfServicio}/>
 
-                {/**esta ruta lleva a llenar un frmulario de nuevo usuario */}
+                <Route exact path ="/Default/" component={Default}/>
 
                 <Route component={Error}/>
                 <Route exact path="/user/AlumnoServicio/:id" component={AlumnoServicio}/>

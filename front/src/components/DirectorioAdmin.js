@@ -73,14 +73,13 @@ class DirectorioAdmin extends Component{
                                 </div>
                             </th>
                             <th className="table"><Link to='/admin/Crearadmin' className = "active">Crear Administrador</Link></th>
-                             {/* <th className="table"><Link to='/admin/MisDatosAdmin' className = "active">Datos de Admin</Link></th>*/}
-                            {/*<th className="table"><button id ="table-btn" onClick={this.cerrarSesion}>cerrar sesion</button></th>*/}
+                            
                      <th className="table" >
                          <div >
                         
                         <ul>
                             <li>
-                                <Link to='#' className="active">{this.state.nombre}...</Link>
+                                <Link to='#' className="active">{cookies.get('nombre')}...</Link>
                                 <ul>
                                    
                                     <li className="active" ><Link to='/admin/MisDatosAdmin' className = "active">Configuración</Link></li>

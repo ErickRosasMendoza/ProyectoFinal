@@ -1326,6 +1326,7 @@ label[for="file"]#input-size{
 #btn-table{
 
   min-height: 100px;
+  min-width: 250px;
   font-size: 30px;
 
 }

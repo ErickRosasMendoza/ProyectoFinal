@@ -10,12 +10,20 @@ class DirectorioAlumno extends Component{
 
     usuraioRef=React.createRef();
     usuraioRef=cookies.remove('tipoUsuario', {path:"/"});
+    
 
 	state = {
         email: cookies.get('email'),
         tipoUsuario: cookies.get('tipoUsuario'),
-        //nombre: cookies.get('nombre')
-        nombre: "luis fernando"
+        
+    }
+    
+    componentWillMount=()=>{
+        this.setState({
+            nombre: cookies.get('nombre')
+        })
+        //forzar tipo usuario, se puede setear desde back
+        cookies.set('tipoUsuario', "false" ,{path: "/"})
     }
 
 	cerrarSesion = () => {
@@ -25,6 +33,7 @@ class DirectorioAlumno extends Component{
         cookies.remove('tipoUsuario', {path:"/"});
         cookies.remove('idAlumno', {path:"/"});
         cookies.remove('boleta', {path:"/"});
+        cookies.remove('nombre', {path:"/"});
         window.location.href = '/auth/logout';
     }//Fin de Cerrar SesiON 
     
@@ -44,7 +53,7 @@ class DirectorioAlumno extends Component{
                         
                         <ul>
                             <li>
-                                <Link to='#' className="active">{this.state.nombre}...</Link>
+                                <Link to='#' className="active">{cookies.get('nombre')}...</Link>
                                 <ul>
                                    
                                     <li className="active" ><Link to='/user/MisDatosAlumno' className = "active">Configuración</Link></li>

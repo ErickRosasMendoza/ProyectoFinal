@@ -27,10 +27,10 @@ class MisDatosAlumno extends React.Component {
     componentWillMount() {
         this.getAlumno();
         //alert(cookies.get('idUsuario'));
-        cookies.set('idUsuario', 1, {path: "/"})
-        cookies.set('idAlumno', 1, {path: "/"})
-        cookies.set('email', "dummy@prueba.com", {path: "/"})
-        cookies.set('password', "0", {path: "/"})
+      //  cookies.set('idUsuario', {path: "/"})
+       // cookies.set('idAlumno', {path: "/"})
+       // cookies.set('email', "dummy@prueba.com", {path: "/"})
+        
     }
 
     getAlumno = () => {
@@ -43,10 +43,9 @@ class MisDatosAlumno extends React.Component {
                 });
                 cookies.set('idAlumno', this.state.alumno.idAlumno, {path: "/"})
                 cookies.set('boleta', this.state.alumno.boleta, {path: "/"})
+                cookies.set('nombre', this.state.alumno.nombre, {path: "/"})
             })
-            .catch(err => {
-                // window.location.reload(false);
-            })
+            
     }//Fin de funcion getAlumno()
 
 

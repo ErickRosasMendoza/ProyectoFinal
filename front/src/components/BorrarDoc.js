@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
-import DirectorioAdmin from './DirectorioAdmin';
-import Slider from './Slider';
 
 
 class BorrarDoc extends React.Component {

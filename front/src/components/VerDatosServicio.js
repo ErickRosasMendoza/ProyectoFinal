@@ -31,7 +31,7 @@ class VerDatosServicio extends React.Component{
         }//Fin de funcion getServicio()
         
     render() {
-        if(this.state.status === 'success'){
+        if(this.state.servicio ){
             if(this.state.servicio.semestre != "EGRESADO")
             {
                 return(

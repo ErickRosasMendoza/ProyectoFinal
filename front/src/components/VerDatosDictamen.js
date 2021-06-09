@@ -14,7 +14,7 @@ class VerDatosDictamen extends React.Component{
         dictamen: {},
         idAlumno: cookies.get('idAlumno'),
         email: cookies.get('email'),
-        status: null
+        status: false
     };
         componentWillMount() {
             this.getDictamen();
@@ -26,14 +26,16 @@ class VerDatosDictamen extends React.Component{
             .then(res => {
                     this.setState({
                         dictamen: res.data,
-                        status: 'success'
+                        status: true
                        });
-                       console.log("respuesta " + this.state.dictamen)
+                       console.log("respuesta " + this.state.dictamen.porcentajeCreditos)
             });
+            //alert(this.state.dictamen.porcentajeCreditos)
         }//Fin de funcion getDictamen()
         
     render() {
-        if(this.state.status === 'success'){
+        if(this.state.dictamen.porcentajeCreditos){
+           
             return(
                 <div className="center">
                         <div id="sidebar" className="dictamenCenter">

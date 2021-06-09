@@ -31,7 +31,7 @@ class VerDatosLiberacion extends React.Component{
         }//Fin de funcion getLiberacion()
         
     render() {
-        if(this.state.status == 'success'){
+        if(this.state.liberacionExtemporanea){
                 return(
                     <div className="center">
                             <div id="sidebar" className="liberacionCenter">

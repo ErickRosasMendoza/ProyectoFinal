@@ -32,7 +32,7 @@ public class DocsBajaRestController {
 
     	docsBajaService.store(file,idDoc);
     	String fileName = StringUtils.cleanPath(file.getOriginalFilename());
-    	System.out.println(fileName + " <-- Luis esta borracho y lo hizo llorar el Damenso");
+    	
     	
     	return fileName;
     }

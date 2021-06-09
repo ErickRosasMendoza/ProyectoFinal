@@ -19,4 +19,8 @@ public interface UsuarioService {
 	Boolean findByUser(UsuarioDTO user);
 	
 	void resetPassword (UsuarioDTO usuarioDTO)throws EmptyResultException;
+	
+	void saveUsuarioAdmin(UsuarioDTO usuarioDTO) throws MailRepetidoException;
+	
+	UsuarioDTO findUsuarioByAlumno(Long idAlumno) throws EmptyResultException;
 }

@@ -1,9 +1,13 @@
 package com.bew.demo.service;
+import com.bew.demo.dto.AlumnoDTO;
 
+
+import com.bew.demo.dao.AlumnoRepository;
 import com.bew.demo.dao.UsuarioRepository;
 import com.bew.demo.dto.UsuarioDTO;
 import com.bew.demo.exception.EmptyResultException;
 import com.bew.demo.exception.MailRepetidoException;
+import com.bew.demo.model.Alumno;
 import com.bew.demo.model.Usuario;
 import com.github.dozermapper.core.DozerBeanMapperBuilder;
 import com.github.dozermapper.core.Mapper;
@@ -24,6 +28,9 @@ public class UsuarioServiceImpl implements UsuarioService{
 
     @Autowired
     UsuarioRepository usuarioRepository;
+    
+    @Autowired
+    AlumnoRepository alumnoRepository;
 
     @Override
     public List<UsuarioDTO> findAll() {
@@ -117,7 +124,27 @@ public class UsuarioServiceImpl implements UsuarioService{
             usuario = (mapper.map(usuarioDTO, Usuario.class));
             String encPassword = DigestUtils.md5DigestAsHex(usuarioDTO.getPassword().getBytes());
             usuario.setPassword(encPassword);
+            usuario.setTipoUsuario(true);
             usuario.setTipoUsuario(false);
+            
+            usuarioRepository.save(usuario);
+           
+        }
+
+    }
+    @Override
+    public void saveUsuarioAdmin(UsuarioDTO usuarioDTO) throws  MailRepetidoException {
+
+        if (usuarioRepository.findByEmail(usuarioDTO.getEmail()).isPresent()) {
+            throw new MailRepetidoException("Este usuario ya esta registrado");
+        } else {
+            Usuario usuario;
+             
+            Mapper mapper = DozerBeanMapperBuilder.buildDefault();
+            usuario = (mapper.map(usuarioDTO, Usuario.class));
+            String encPassword = DigestUtils.md5DigestAsHex(usuarioDTO.getPassword().getBytes());
+            usuario.setPassword(encPassword);
+            usuario.setTipoUsuario(true);
             
             usuarioRepository.save(usuario);
            
@@ -126,11 +153,13 @@ public class UsuarioServiceImpl implements UsuarioService{
     }
 
 
+
     @Override
     public void updateUsuario(UsuarioDTO usuarioDTO) throws EmptyResultException {
      
         Usuario usuario;
         Long idUsuario = usuarioDTO.getIdUsuario(); 
+        System.out.println("id de del usuario" + idUsuario);
         
         Optional<Usuario> opUsuario = usuarioRepository.findById(idUsuario);
         usuario = opUsuario.get();
@@ -153,7 +182,7 @@ public class UsuarioServiceImpl implements UsuarioService{
 
     @Override
     public void deleteUsuario(Long idUsuario) throws EmptyResultException {
-        // TODO Auto-generated method stub
+    
         usuarioRepository.deleteById(idUsuario);
     }
 
@@ -186,13 +215,32 @@ public class UsuarioServiceImpl implements UsuarioService{
 	@Override
 	public void resetPassword(UsuarioDTO usuarioDTO) throws EmptyResultException {
 		Usuario usuario = null;
-		usuario=usuarioRepository.findById(usuarioDTO.getIdUsuario()).orElseThrow(() -> new EmptyResultException("Sin Resultados"));
-       
+		
+		 Alumno alumno = alumnoRepository.findById(usuarioDTO.getIdUsuario()).orElseThrow(() -> new EmptyResultException("Sin Resultados"));
+		
+		
+		Long idUsuarioAlumno = alumno.getIdUsuario();
         String encPassword = DigestUtils.md5DigestAsHex(usuarioDTO.getPassword().getBytes());
-        
+       
+        usuario = usuarioRepository.findById(idUsuarioAlumno).orElseThrow(() -> new EmptyResultException("Sin Resultados"));
         usuario.setPassword(encPassword);
         
         usuarioRepository.save(usuario);
+		
+	}
+
+	@Override
+	public UsuarioDTO findUsuarioByAlumno(Long idAlumno) throws EmptyResultException {
+		UsuarioDTO usuarioDTO = new UsuarioDTO();
+		Usuario usuario = null;
+		 Alumno alumno = alumnoRepository.findById(idAlumno).orElseThrow(() -> new EmptyResultException("Sin Resultados"));
+		 Long idUsuario = alumno.getIdUsuario();
+		 Optional<Usuario> opUsuario = usuarioRepository.findById(idUsuario);
+	        usuario = opUsuario.get();
+	        Mapper mapper = DozerBeanMapperBuilder.buildDefault();
+	        usuarioDTO = (mapper.map(usuario, UsuarioDTO.class));
+
+	        return usuarioDTO;
 		
 	}
 

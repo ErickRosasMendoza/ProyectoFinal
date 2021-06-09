@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import HeaderDEyAE from './HeaderDEyAE';
 import DirectorioAlumno from './DirectorioAlumno';
-
+import Footer from './Footer';
 import Cookies from 'universal-cookie';
 import SubirBaja from './SubirBaja';
 import VerDatosBaja from './VerDatosBaja';
@@ -311,6 +311,7 @@ class Baja extends React.Component {
                           </div>
                            <SubirBaja/>
                           <VerDatosBaja/>
+                          <Footer/>
             </div>
         );
     }

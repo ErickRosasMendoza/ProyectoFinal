@@ -22,7 +22,7 @@ class PdfLiberacion extends React.Component {
         return(
             <div>
             <PDFReader 
-               url ={"http://localhost:8080/docLiberacion/getDoc/" + this.state.docLiberacion}
+               url ={"docLiberacion/getDoc/" + this.state.docLiberacion}
               showAllPage="true"
             >
             </PDFReader >

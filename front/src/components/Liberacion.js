@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import HeaderDEyAE from './HeaderDEyAE';
 import DirectorioAlumno from './DirectorioAlumno';
-
+import Footer from './Footer'
 import Cookies from 'universal-cookie';
 import SubirLiberacion from './SubirLiberacion';
 import VerDatosLiberacion from './VerDatosLiberacion';
@@ -280,6 +280,7 @@ class Liberacion extends React.Component {
                           
                       <SubirLiberacion/> 
                           <VerDatosLiberacion/>
+                          <Footer/>
             </div>
         );
     }

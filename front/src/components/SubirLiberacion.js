@@ -14,7 +14,9 @@ class SubirLiberacion extends React.Component {
     state = {
         idLiberacion: cookies.get('idAlumno'),
         statusArchivo: null,
-        file: null,
+        file: {
+            name:"elegir archivo"
+        },
         status: null,
         lista: {},
         listar:[],
@@ -102,7 +104,7 @@ class SubirLiberacion extends React.Component {
                                             <tr>
                                                 <td className="table_lista">{lista1.nombreDoc}</td>
                                                 <td className="table_lista">{lista1.comentario}</td>
-                                                <td><Link to={'/PdfLiberacion/' + lista1.idDoc}target="_blank" id="btn_watch">Visualizar</Link></td>
+                                                <td><Link to={'/doc/PdfLiberacion/' + lista1.idDoc}target="_blank" id="btn_watch">Visualizar</Link></td>
                                                 <td><a  href={ "http://localhost:8080/docLiberacion/getDoc/" + lista1.idDoc} download  id="btn_downLoad">Descargar</a></td>
                                                 <td><BorrarDoc
                                                 idLista={lista1.idLista}
@@ -113,7 +115,12 @@ class SubirLiberacion extends React.Component {
                                             </tr>
                                     </tbody>
                                     )}
-                                    <input type="file" name = "file" onChange={this.fileChange} />
+                                     <br/>
+                                        <a className="text_login">Subir Archivo</a>
+                                    <div  >
+                                    <label for="file" id = "input-size"  >{this.state.file.name}</label>
+                                    <input type="file" name = "file" id = "file"  onChange={this.fileChange} />
+                                    </div>
                                     {(() => {
                                     switch(this.state.statusArchivo){   
                                     case "false":
@@ -139,7 +146,10 @@ class SubirLiberacion extends React.Component {
                                 <strong>Aun no hay archivos guardados</strong>
                                 <br/>
                                 <a className="text_login">Subir Archivo</a>
-                                <input type="file" name = "file" onChange={this.fileChange} />
+                                <div  >
+                                 <label for="file" id = "input-size"  >{this.state.file.name}</label>
+                                    <input type="file" name = "file" id = "file"  onChange={this.fileChange} />
+                                    </div>
                                 {(() => {
                                     switch(this.state.statusArchivo){   
                                     case "false":
@@ -163,7 +173,10 @@ class SubirLiberacion extends React.Component {
                         <div id="sidebar" className="liberacionRight">
                             <div>
                             Cargando... Espere un momento
-                                <input type="file" name = "file" onChange={this.fileChange} />
+                            <div  >
+                            <label for="file" id = "input-size"  >{this.state.file.name}</label>
+                               <input type="file" name = "file" id = "file"  onChange={this.fileChange} />
+                               </div>
                                 {(() => {
                                     switch(this.state.statusArchivo){   
                                     case "false":

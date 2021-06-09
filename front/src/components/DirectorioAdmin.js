@@ -9,9 +9,22 @@ class DirectorioAdmin extends Component{
 
     state = {
         email: cookies.get('email'),
-        nombre:cookies.get('nombre'),
+        
+
+
+        nombre:"null"
+       
        
     }
+    componentWillMount=()=>{
+        if(cookies.get('nombre') ==="null"){
+            alert("Registra tu información personal en la sección Actualizar Información Personal")
+        }
+
+
+    }
+       
+    
 
 	cerrarSesion(){
         cookies.remove('idUsuario', {path:"/"});
@@ -20,6 +33,7 @@ class DirectorioAdmin extends Component{
         cookies.remove('tipoUsuario', {path:"/"});
         cookies.remove('idAdmin', {path:"/"});
         cookies.remove('idAlumno', {path:"/"});
+        cookies.remove('nombre', {path:"/"});
         window.location.href = '/auth/logout';
     }
 
@@ -80,7 +94,7 @@ class DirectorioAdmin extends Component{
                         
                         <ul>
                             <li>
-                                <Link to='#' className="active">{this.state.nombre}...</Link>
+                                <Link to='#' className="active">{cookies.get('nombre')}...</Link>
                                 <ul>
                                    
                                     <li className="active" ><Link to='/admin/MisDatosAdmin' className = "active">Configuración</Link></li>
@@ -92,7 +106,7 @@ class DirectorioAdmin extends Component{
                             
                             
                         </ul>
-                        <img src={logo} id ="user"></img>
+                        <img src={logo} className ="user"></img>
                         </div>
 
                     </th>

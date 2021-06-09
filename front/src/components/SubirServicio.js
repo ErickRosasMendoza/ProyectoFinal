@@ -14,7 +14,9 @@ class SubirServicio extends React.Component {
     state = {
         idServicio: cookies.get('idAlumno'),
         statusArchivo: null,
-        file: null,
+        file: {
+            name:"elegir archivo"
+        },
         status: null,
         lista: {},
         listar:[],
@@ -77,17 +79,6 @@ class SubirServicio extends React.Component {
         }//Fin de else file
     }//Fin de funcion upLoad
 
-/*    downLoad = () =>{
-        const archivo = new FormData();
-        axios.get("http://localhost:8080/file/getFile/5")
-        .then(res =>{
-            archivo.append('file', this.state.res, this.state.res.name);
-            this.setState({
-                file: this.archivo
-            })
-            console.log(this.state.file.name)
-        });
-    } */
     render() {
         if(this.state.status === 'true'){
             window.location.reload(false);
@@ -110,7 +101,7 @@ class SubirServicio extends React.Component {
                                             <tr>
                                                 <td className="table_lista">{lista1.nombreDoc}</td>
                                                 <td className="table_lista">{lista1.comentario}</td>
-                                                <td><Link to={'/PdfServicio/' + lista1.idDoc}target="_blank" id="btn_watch">Visualizar</Link></td>
+                                                <td><Link to={'/doc/PdfServicio/' + lista1.idDoc}target="_blank" id="btn_watch">Visualizar</Link></td>
                                                 <td><a  href={ "http://localhost:8080/docServicio/getDoc/" + lista1.idDoc} download  id="btn_downLoad">Descargar</a></td>
                                                 <td><BorrarDoc
                                                 idLista={lista1.idLista}
@@ -121,7 +112,16 @@ class SubirServicio extends React.Component {
                                             </tr>
                                     </tbody>
                                     )}
-                                    <input type="file" name = "file" onChange={this.fileChange} />
+                                    <br/>
+                                        <a className="text_login">Subir Archivo</a>
+                                    <div  >
+                                  <label for="file" id = "input-size"  >{this.state.file.name}</label>
+                                    <input type="file" name = "file" id = "file"  onChange={this.fileChange} />
+                                    </div>
+                               
+
+        
+  
                                     {(() => {
                                     switch(this.state.statusArchivo){   
                                         case "false":
@@ -147,7 +147,11 @@ class SubirServicio extends React.Component {
                                 <strong>Aun no hay archivos guardados</strong>
                                 <br/>
                                 <a className="text_login">Subir Archivo</a>
-                                <input type="file" name = "file" onChange={this.fileChange} />
+                                <div  >
+                                 <label for="file" id = "input-size"  >{this.state.file.name}</label>
+                                    <input type="file" name = "file" id = "file"  onChange={this.fileChange} />
+                                    </div>
+
                                 {(() => {
                                     switch(this.state.statusArchivo){   
                                         case "false":
@@ -171,7 +175,10 @@ class SubirServicio extends React.Component {
                         <div id="sidebar" className="servicioRight">
                             <div>
                             Cargando... Espere un momento
-                                <input type="file" name = "file" onChange={this.fileChange} />
+                            <div  >
+                            <label for="file" id = "input-size"  >{this.state.file.name}</label>
+                               <input type="file" name = "file" id = "file"  onChange={this.fileChange} />
+                               </div>
                                 {(() => {
                                     switch(this.state.statusArchivo){   
                                         case "false":

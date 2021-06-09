@@ -16,7 +16,9 @@ class MisDatosAdmin extends React.Component{
 
 
     state = {
-        admin: {},
+        admin: {
+            nombre:"null"
+        },
         usuario: {},
         idUsuario: cookies.get('idUsuario'),
         idAdmin: cookies.get('idAdmin'),

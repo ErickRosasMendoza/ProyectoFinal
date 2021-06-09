@@ -4,13 +4,14 @@ body{
   padding: 0px;
   border: 0px;
   max-width: 100%;
-  height: 100%;
+  min-height:950px;
+  max-height: 1370px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   -moz-font-feature-settings: initial;
   -webkit-font-feature-settings: normal;
  
  /* background: rgb(235,255,243);*/
-background: linear-gradient(308deg, rgb(219, 236, 255) 0%, rgba(232,232,232,1) 52%, rgb(249, 238, 252) 100%);
+background: linear-gradient(308deg, rgb(236, 255, 241) 0%, rgba(232,232,232,1) 52%, rgb(253, 234, 234) 100%);
 }
 /*
 background: rgba(47, 1, 1, 0.11);
@@ -24,9 +25,9 @@ rgba(68, 14, 14, 0.507) 25%,
 #header{
   height: 160px;
   width: 100%;
-  background: #E9ECEF;
+  background: #ffffff;
   margin: 0px,0px,8px;
-  color: #8A2D2D;
+  color: #2d8a6e;
 }
 .h2, h2 {
   font-size: 2rem;
@@ -46,17 +47,21 @@ h2 {
   margin-inline-end: 0px;
 }
 .jumbotron {
-  color: #8a2d2d;
+  color: #8a2d2dc0;
   margin: 0;
   padding: 2px;
   padding-bottom: 0px;
   padding-left: 0px;
   padding-right: 0px;
-  background: #E9ECEF;
+  background: #ffffff;
   height: 90px;
+  text-align:center;
 }
 .text-center {
-  text-align: center!important;
+  
+ 
+ color: #02275e;
+
 }
 *, ::after, ::before {
   box-sizing: border-box;
@@ -97,10 +102,10 @@ div {
   margin-left: 0px;
 }
 #logo2{
-  margin-top: 30px;
-  width: 27%;
+  margin-top: 7px;
+  width: 70px;
   float: left;
-  margin-left: 0px;
+  margin-left: 70px;
   
 }
 .text-logo{
@@ -177,8 +182,8 @@ div {
   color: rgb(145, 145, 145);
 }
 
-#user{
-  max-width: 25px;
+.user{
+  width: 25px;
   
 
 }
@@ -277,12 +282,12 @@ div {
 }
 #sidebar{
   width: 30%;
-height: 500px;
+  height: 500px;
   margin-top: 2px;
   margin-left:  480px;
   margin-bottom: 32px;
   padding-bottom: 20px;
-  background: rgba(255, 255, 255, 0.404);
+  background: rgba(255, 255, 255, 0.959);
   border-radius: 1px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   font-size: 20px;
@@ -319,20 +324,7 @@ height: 500px;
   height: auto;
   width: 595px
 }
-#dictamenLeft{
 
-  width: 30%;
-height: 220px;
-  margin-top: 2px;
-  margin-left:  5px;
-  margin-bottom: 32px;
-  padding-bottom: 20px;
-  background: rgba(255, 255, 255, 0.404);
-  border-radius: 1px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  font-size: 20px;
-  font-weight:300;
-}
 #sidebar.dictamenCenter{
   margin-left: 350px;
   margin-top: -232px;
@@ -398,7 +390,7 @@ height: 220px;
 }
 #sidebar.liberacionRight{
   float: right;
-  margin-top: -680px;
+  margin-top: -683px;
   margin-right: 2px;
   min-height: 220px;
   height: auto;
@@ -406,7 +398,7 @@ height: 220px;
 }
 #sidebar.liberacionCenter{
   margin-left: 350px;
-  margin-top: -680px;
+  margin-top: -683px;
   min-height: 120px;
   height: auto;
   max-width: 30%;
@@ -416,9 +408,7 @@ height: 220px;
   height: auto;
   height: auto;
   margin-left: 5px;
-  max-width: 25%;
-
- 
+  max-width: 25%; 
 }
 #sidebar.bajaRight{
   float: right;
@@ -447,7 +437,7 @@ height: 220px;
   margin-right: 2px;
   min-height: 220px;
   height: auto;
-  width: 595px;
+  width: 580px;
 }
 #sidebar.servicioCenter{
   margin-left: 350px;
@@ -602,22 +592,23 @@ textarea:focus{
   height: 25px;
   margin-left: 0px;
 
- 
-  
-
 }
 
 
 
 #footer{
-  background: rgb(197, 197, 197);
+  background: rgba(211, 211, 211, 0.493);
   width: 100%;
   height: 25px;
-  margin-top: 0px;
+  margin-top: 650px;
   border-top: 0px;
+  position:relative;
+  left:0;
+  bottom:0;
+  right:0;
 
-  color: rgb(56, 56, 56);
-  display: block;
+  color: rgb(124, 124, 124);
+ 
   float: none;
 }
 
@@ -844,22 +835,23 @@ input[type="radio"]{
   color: rgb(255, 255, 255);
 }
 #btn_deleteRegistro{
-  background: rgba(189, 0, 0, 0.63);
+  background: rgba(233, 5, 5, 0.63);
   color: rgb(255, 255, 255);
-  width: 80px;
-  height: 45px;
-  margin-left: 0px ;
+  width: 100px;
+  height: 60px;
+  margin-left: 5px ;
   margin-right: 10px;
-  font-size: 13px;
-  font-weight: 200;
+  padding: 2px;
+  font-size: 15px;
+  font-weight: 80;
   text-shadow: none;
   text-decoration: none;
   box-shadow: 0px 0px 5px rgb(255, 255, 255);
-  border-radius: 10px;
+  border-radius: 1px;
   transition: 300ms;
   cursor: pointer;
-  font-weight: bold;
-  text-transform: uppercase;
+ 
+  
 }
 #btn_deleteRegistro:hover{
   background: rgb(129, 6, 6);
@@ -1123,3 +1115,254 @@ ul li ul li:hover {background: #343a40;}
   padding-left: 30px;
   font-size: 22px;
 }
+
+/********+++++++++++++++++++++++++***RESPONSIVE******/
+
+@media(max-width:1000px){
+  body{
+      background: rgba(26, 95, 104, 0.925);
+      max-width: 900px;;
+  }
+
+  .table{
+   
+    height: 350px;
+    min-width: 100px;
+    min-width: 320px;
+    font-size: 22px;
+  }
+
+  .active{
+    font-weight: 100;
+    font-size: 45px;
+    box-shadow: none;
+   
+  }
+  #sidebar.servicioLeft{
+    min-height: 700px;
+    
+    margin-left: 5px;
+    min-width: 1600px;
+    font-weight: 100;
+    font-size: 70px;
+    float: none;
+  }
+  #sidebar.servicioCenter{
+    margin-left: 5px;
+    margin-top: 0px;
+    min-height: 500px;
+    min-width: 1600px;
+    font-weight: 100;
+    font-size: 70px;
+    float: none;
+  }
+  #sidebar.servicioRight{
+    margin-left: 5px;
+    margin-top: -1px;
+    min-height: 500px;
+    min-width: 1600px;
+    font-weight: 100;
+    font-size: 70px;
+    float: none;
+  }
+  #sidebar.dictamenCenter{
+    margin-left: 5px;
+    margin-top: 0px;
+    min-height: 500px;
+    min-width: 1600px;
+    font-weight: 100;
+    font-size: 70px;
+    float: none;
+  }
+  #sidebar.liberacionLeft{
+    min-height: 700px;
+    margin-left: 5px;
+    min-width: 1600px;
+    font-weight: 100;
+    font-size: 70px;
+    float: none;
+  }
+  #sidebar.liberacionCenter{
+    margin-left: 5px;
+    margin-top: 0px;
+    min-height: 500px;
+    min-width: 1600px;
+    font-weight: 100;
+    font-size: 70px;
+    float: none;
+  }
+  #sidebar.liberacionRight{
+    margin-left: 5px;
+    margin-top: -1px;
+    min-height: 500px;
+    min-width: 1600px;
+    font-weight: 100;
+    font-size: 70px;
+    float: none;
+  }
+  #sidebar.bajaLeft{
+    min-height: 700px;
+    margin-left: 5px;
+    min-width: 1600px;
+    font-weight: 100;
+    font-size: 70px;
+    float: none;
+  }
+  #sidebar.bajaCenter{
+    margin-left: 5px;
+    margin-top: 0px;
+    min-height: 500px;
+    min-width: 1600px;
+    font-weight: 100;
+    font-size: 70px;
+    float: none;
+  }
+  #sidebar.bajaRight{
+    margin-left: 5px;
+    margin-top: -1px;
+    min-height: 500px;
+    min-width: 1600px;
+    font-weight: 100;
+    font-size: 70px;
+    float: none;
+  }
+  #sidebar.datosAlumno{
+    margin-left: 350px;
+    margin-top: -200px;
+    min-height: 500px;
+    min-width: 1000px;
+    font-weight: 50px;
+    font-size: 50px;
+    float: none;
+  }
+  
+  .jumbotron {
+
+  
+    min-width: 1610px;
+    height: 400px;
+    
+    
+  }
+  
+#footer{
+  margin-top: 1000px;
+  min-width: 1600px;
+  min-height: 100px;
+  font-size: 75px;
+
+}
+.btn{
+ 
+max-width: 900px;
+font-size: 60px;
+}
+.input_login{
+  width: 800px;
+  height: 100px;
+  font-size: 50px;
+
+}
+#Header{
+  font-size: 70px;
+  margin-top: 30px;
+}
+#logo2{
+  width: 280px;
+  float: left;
+}
+#btn_downLoad{
+
+  font-size: 70px;
+
+}
+#btn_watch{
+  font-size: 70px;
+ 
+
+
+}
+#btn_delete{
+  font-size: 70px;
+  width: 350px;
+  height: 100px;
+  float: right;
+ margin-left: -500px;
+ margin-top: 300px;
+}
+#file-upload-button{
+  width: 500px;
+}
+#state_new{
+  font-size:70px ;
+}
+#state_processing{
+  font-size: 70px;
+}
+#state_finished{
+  font-size: 70px;
+}
+#state_rejected{
+  font-size: 70px;
+}
+
+.user{
+  width: 85px;
+}
+#table-btn{
+  font-size: 50px;
+}
+
+label[for="file"]#input-size{
+  font-size: 30px;
+  width: 500px
+}
+.table_lista{
+
+  width: 600px; bottom: 1px solid #000000;
+  padding: 10px;
+  font-size: 35px;;
+ 
+}
+#btn-table{
+
+  min-height: 280px;
+  font-size: 30px;
+
+}
+.btnCancel{
+ 
+  min-height: 100px;
+  font-size: 30px;
+}
+
+
+
+}
+
+
+input[type="file"]#file{
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+ 
+}
+label[for="file"] {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #10a058;
+  display: inline-block;
+  transition: all .5s;
+  cursor: pointer;
+  padding: 10px 5px !important;
+  text-transform: uppercase;
+  width:200PX;
+  text-align: center;
+  }
+ #input-size{
+    font-size: 14px;
+ }

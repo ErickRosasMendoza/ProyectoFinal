@@ -33,6 +33,7 @@ public class MyAuthenticationSuccessHandler implements AuthenticationSuccessHand
         cTipoUsuario.setPath("/");
         cTipoUsuario.setSecure(false);
         httpServletResponse.addCookie(cTipoUsuario);
+
         httpServletResponse.sendRedirect("/");
     }
 }

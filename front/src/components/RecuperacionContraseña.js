@@ -10,7 +10,7 @@ class RecuperacionContraseña extends React.Component{
 
 
     state = {
-        usuario:{},
+        alumno:{},
         recuperar:{},
         contraseña: null,
         statusContraseña: null,
@@ -22,30 +22,32 @@ class RecuperacionContraseña extends React.Component{
     changeState = () =>{
         this.setState({
             recuperar:{
-                idUsuario:95,
-                // idUsuario: this.props.id,
-                email:"fer@gmail.com",
-                //email: this.state.usuario.email,
-                password: "p4SS"+this.props.id+"dEYAe",
+                idUsuario: this.props.id,
+               
+                email: this.state.alumno.email,
+                password: "p4S"+this.props.id+"dEYAe",
                 
             }
         });
         
     }//Fin de changeState
   componentWillMount = () =>{
-    this.getUsuario();
-    this.setState({
-        contraseña: "true"
-    });
+    this.getAlumno();
+
     console.log(this.props.className)
   }
-    getUsuario = () =>{
-        axios.get("usuario/find/"+this.props.id)
+     getAlumno = () =>{
+        console.log(this.props.id+ " id del usuario de las props ")
+        axios.get("usuario/findByAlumno/"+ this.props.id)
         .then(res =>{
             this.setState({
-                usuario: res.data,
+                alumno: res.data,
+                contraseña: "true"
             });
+            console.log(this.state.alumno.email + " id del usuario -a lumno que regresa de axios ")
+            console.log(this.state.alumno.email + " id del usuario -a lumno que regresa de axios ")
         });
+
     }//Fin de getUsuario()
     
     updateContraseña = () =>{
@@ -54,6 +56,7 @@ class RecuperacionContraseña extends React.Component{
         if(this.cambioRef.current.value === "SI"){
             console.log("passwoed" + this.state.recuperar.password)
             console.log("passwoed" + this.state.recuperar.idUsuario)
+            console.log("passwoed" + this.state.recuperar.email)
             try{
                 axios.post("usuario/reset", this.state.recuperar)
                 .then(res =>{
@@ -115,9 +118,9 @@ class RecuperacionContraseña extends React.Component{
                                                         break;
                                                 }
                                                 })()}<br/>
-                                                <strong>Email:</strong> {this.state.usuario.email}
+                                                <strong>Email:</strong> {this.state.alumno.email}
                                                 <br/> <br/>
-                                                <strong>Nueva Contraseña:</strong> p4SS{this.props.id}dEYAe
+                                                <strong>Nueva Contraseña:</strong> p4S{this.props.id}dEYAe
 
                                                 <br/><br/>
                                                 

@@ -35,5 +35,7 @@ public interface AlumnoService {
     AlumnoDTO AlumnoApellidoPaterno(String apellidoPaterno);
 
     AlumnoDTO AlumnoApellidoMaterno(String apellidoMaterno);
+    
+    
 
 }

@@ -58,6 +58,70 @@ public class Dictamen implements Serializable{
 	@JoinColumn(name="id_alumno",insertable=false, updatable = false)
 	private Alumno alumno;
 
+	public Long getIdDictamen() {
+		return idDictamen;
+	}
+
+	public void setIdDictamen(Long idDictamen) {
+		this.idDictamen = idDictamen;
+	}
+
+	public Long getPorcentajeCreditos() {
+		return porcentajeCreditos;
+	}
+
+	public void setPorcentajeCreditos(Long porcentajeCreditos) {
+		this.porcentajeCreditos = porcentajeCreditos;
+	}
+
+	public String getSemestre() {
+		return semestre;
+	}
+
+	public void setSemestre(String semestre) {
+		this.semestre = semestre;
+	}
+
+	public String getEstado() {
+		return estado;
+	}
+
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
+
+	public String getFechaRegistro() {
+		return fechaRegistro;
+	}
+
+	public void setFechaRegistro(String fechaRegistro) {
+		this.fechaRegistro = fechaRegistro;
+	}
+
+	public String getRevisado() {
+		return revisado;
+	}
+
+	public void setRevisado(String revisado) {
+		this.revisado = revisado;
+	}
+
+	public Long getIdAlumno() {
+		return idAlumno;
+	}
+
+	public void setIdAlumno(Long idAlumno) {
+		this.idAlumno = idAlumno;
+	}
+
+	public Alumno getAlumno() {
+		return alumno;
+	}
+
+	public void setAlumno(Alumno alumno) {
+		this.alumno = alumno;
+	}
+
 
 
 

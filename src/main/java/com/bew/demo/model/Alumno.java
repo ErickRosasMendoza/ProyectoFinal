@@ -70,5 +70,62 @@ public class Alumno implements Serializable{
 	@JoinColumn(name="id_usuario",insertable=false, updatable = false)
 	private Usuario usuario;
 
+
+
+	public Long getIdAlumno() {
+		return idAlumno;
+	}
+	public void setIdAlumno(Long idAlumno) {
+		this.idAlumno = idAlumno;
+	}
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public String getApellidoPaterno() {
+		return apellidoPaterno;
+	}
+	public void setApellidoPaterno(String apellidoPaterno) {
+		this.apellidoPaterno = apellidoPaterno;
+	}
+	public String getApellidoMaterno() {
+		return apellidoMaterno;
+	}
+	public void setApellidoMaterno(String apellidoMaterno) {
+		this.apellidoMaterno = apellidoMaterno;
+	}
+	public String getBoleta() {
+		return boleta;
+	}
+	public void setBoleta(String boleta) {
+		this.boleta = boleta;
+	}
+	public String getProgramaAcademico() {
+		return programaAcademico;
+	}
+	public void setProgramaAcademico(String programaAcademico) {
+		this.programaAcademico = programaAcademico;
+	}
+	public String getSexo() {
+		return sexo;
+	}
+	public void setSexo(String sexo) {
+		this.sexo = sexo;
+	}
+	public Long getIdUsuario() {
+		return idUsuario;
+	}
+	public void setIdUsuario(Long idUsuario) {
+		this.idUsuario = idUsuario;
+	}
+	public Usuario getUsuario() {
+		return usuario;
+	}
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
+
 	
 }

@@ -1123,3 +1123,254 @@ ul li ul li:hover {background: #343a40;}
   padding-left: 30px;
   font-size: 22px;
 }
+
+/********+++++++++++++++++++++++++***RESPONSIVE******/
+
+@media(max-width:1000px){
+  body{
+      background: rgba(26, 95, 104, 0.925);
+      max-width: 1000px;;
+  }
+
+  .table{
+   
+    height: 350px;
+    min-width: 100px;
+    max-width: 600px;
+    font-size: 22px;
+  }
+
+  .active{
+    font-weight: 100;
+    font-size: 45px;
+    box-shadow: none;
+   
+  }
+  #sidebar.servicioLeft{
+    min-height: 700px;
+    
+    margin-left: 5px;
+    min-width: 1570px;
+    font-weight: 100;
+    font-size: 70px;
+    float: none;
+  }
+  #sidebar.servicioCenter{
+    margin-left: 5px;
+    margin-top: 0px;
+    min-height: 500px;
+    min-width: 1570px;
+    font-weight: 100;
+    font-size: 70px;
+    float: none;
+  }
+  #sidebar.servicioRight{
+    margin-left: 5px;
+    margin-top: -1px;
+    min-height: 500px;
+    min-width: 1570px;
+    font-weight: 100;
+    font-size: 70px;
+    float: none;
+  }
+  #sidebar.dictamenCenter{
+    margin-left: 5px;
+    margin-top: 0px;
+    min-height: 500px;
+    min-width: 1570px;
+    font-weight: 100;
+    font-size: 70px;
+    float: none;
+  }
+  #sidebar.liberacionLeft{
+    min-height: 700px;
+    margin-left: 5px;
+    min-width: 1570px;
+    font-weight: 100;
+    font-size: 70px;
+    float: none;
+  }
+  #sidebar.liberacionCenter{
+    margin-left: 5px;
+    margin-top: 0px;
+    min-height: 500px;
+    min-width: 1570px;
+    font-weight: 100;
+    font-size: 70px;
+    float: none;
+  }
+  #sidebar.liberacionRight{
+    margin-left: 5px;
+    margin-top: -1px;
+    min-height: 500px;
+    min-width: 1570px;
+    font-weight: 100;
+    font-size: 70px;
+    float: none;
+  }
+  #sidebar.bajaLeft{
+    min-height: 700px;
+    margin-left: 5px;
+    min-width: 1570px;
+    font-weight: 100;
+    font-size: 70px;
+    float: none;
+  }
+  #sidebar.bajaCenter{
+    margin-left: 5px;
+    margin-top: 0px;
+    min-height: 500px;
+    min-width: 1570px;
+    font-weight: 100;
+    font-size: 70px;
+    float: none;
+  }
+  #sidebar.bajaRight{
+    margin-left: 5px;
+    margin-top: -1px;
+    min-height: 500px;
+    min-width: 1570px;
+    font-weight: 100;
+    font-size: 70px;
+    float: none;
+  }
+  #sidebar.datosAlumno{
+    margin-left: 350px;
+    margin-top: -200px;
+    min-height: 500px;
+    min-width: 1000px;
+    font-weight: 50px;
+    font-size: 50px;
+    float: none;
+  }
+  
+  .jumbotron {
+
+  
+    min-width: 1520px;
+    height: 400px;
+    
+    
+  }
+  
+#footer{
+  margin-top: 1000px;
+  min-width: 1570px;
+  min-height: 100px;
+  font-size: 75px;
+
+}
+.btn{
+ 
+max-width: 900px;
+font-size: 60px;
+}
+.input_login{
+  width: 800px;
+  height: 100px;
+  font-size: 50px;
+
+}
+#Header{
+  font-size: 70px;
+  margin-left: 0px;
+}
+#logo2{
+  width: 280px;
+  float: left;
+}
+#btn_downLoad{
+
+  font-size: 70px;
+
+}
+#btn_watch{
+  font-size: 70px;
+ 
+
+
+}
+#btn_delete{
+  font-size: 70px;
+  width: 350px;
+  height: 100px;
+  float: right;
+ margin-left: -500px;
+ margin-top: 300px;
+}
+#file-upload-button{
+  width: 500px;
+}
+#state_new{
+  font-size:70px ;
+}
+#state_processing{
+  font-size: 70px;
+}
+#state_finished{
+  font-size: 70px;
+}
+#state_rejected{
+  font-size: 70px;
+}
+
+.user{
+  width: 85px;
+}
+#table-btn{
+  font-size: 50px;
+}
+
+label[for="file"]#input-size{
+  font-size: 30px;
+  width: 500px
+}
+.table_lista{
+
+  width: 600px; bottom: 1px solid #000000;
+  padding: 10px;
+  font-size: 35px;;
+ 
+}
+#btn-table{
+
+  min-height: 280px;
+  font-size: 30px;
+
+}
+.btnCancel{
+ 
+  min-height: 100px;
+  font-size: 30px;
+}
+
+
+
+}
+
+
+input[type="file"]#file{
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+ 
+}
+label[for="file"] {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #10a058;
+  display: inline-block;
+  transition: all .5s;
+  cursor: pointer;
+  padding: 10px 5px !important;
+  text-transform: uppercase;
+  width:200PX;
+  text-align: center;
+  }
+ #input-size{
+    font-size: 14px;
+ }

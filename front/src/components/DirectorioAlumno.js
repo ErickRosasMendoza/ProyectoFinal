@@ -9,27 +9,12 @@ class DirectorioAlumno extends Component{
 
 
     usuraioRef=React.createRef();
-    
+    usuraioRef=cookies.remove('tipoUsuario', {path:"/"});
 
 	state = {
         email: cookies.get('email'),
         tipoUsuario: cookies.get('tipoUsuario'),
-        tipoUsuario: cookies.get('tipoUsuario'),  
-        nombre:"null"
-    }
-    componentWillMount=()=>{
-        this.setState({
-            nombre: cookies.get('nombre')
-            
-        });
-        if(cookies.get('nombre') ==="null"){
-            alert("Registra tu información personal en la sección Actualizar Información Personal")
-        }
-
-
-    
-
-       
+        nombre: cookies.get('nombre')
     }
 
 	cerrarSesion = () => {
@@ -39,8 +24,6 @@ class DirectorioAlumno extends Component{
         cookies.remove('tipoUsuario', {path:"/"});
         cookies.remove('idAlumno', {path:"/"});
         cookies.remove('boleta', {path:"/"});
-        cookies.remove('nombre', {path:"/"});
-    
         window.location.href = '/auth/logout';
     }//Fin de Cerrar SesiON 
     
@@ -60,10 +43,10 @@ class DirectorioAlumno extends Component{
                         
                         <ul>
                             <li>
-                                <Link to='#' className="active">{cookies.get('nombre')}...</Link>
+                                <Link to='#' className="active">{this.state.nombre}...</Link>
                                 <ul>
                                    
-                                    <li className="active" ><Link to='/user/MisDatosAlumno' className = "active">Configuración</Link></li>
+                                    <li className="active" ><Link to='/MisDatosAlumno' className = "active">Configuración</Link></li>
                                     <li className="active"  > <p id ="table-btn" onClick={this.cerrarSesion}>cerrar sesion</p></li>
                                     
                                 </ul>
@@ -72,7 +55,7 @@ class DirectorioAlumno extends Component{
                             
                             
                         </ul>
-                        <img src={logo} className ="user"></img>
+                        <img src={logo} id ="user"></img>
                         </div>
 
                     </th>

@@ -57,14 +57,6 @@ public class UsuarioRestController {
 		return ResponseEntity.ok(usuarioRes);
 	}
 	
-	@GetMapping(path = "/findByAlumno/{idAlumno}", produces = "application/json")
-	public ResponseEntity<?>findE(@PathVariable("idAlumno") Long idAlumno) throws EmptyResultException {
-		UsuarioDTO usuarioRes;
-		usuarioRes = usuarioService.findUsuarioByAlumno(idAlumno);
-		return ResponseEntity.ok(usuarioRes);
-	}
-	
-	
 	@GetMapping(path = "/findContraseña/{contraseña}", produces = "application/json")
 	public ResponseEntity<?>findC(@PathVariable("contraseña") String contraseña){
 		UsuarioDTO usuarioDTO;
@@ -81,12 +73,6 @@ public class UsuarioRestController {
 	public ResponseEntity<?> save(@RequestBody UsuarioDTO usuarioDTO) throws  MailRepetidoException {
 		
 			usuarioService.saveUsuario (usuarioDTO);
-			return ResponseEntity.ok(usuarioDTO);
-	}
-	@PostMapping(path = "/saveAdmin", consumes = "application/json")
-	public ResponseEntity<?> saveUsuarioAdmin(@RequestBody UsuarioDTO usuarioDTO) throws  MailRepetidoException {
-		
-			usuarioService.saveUsuarioAdmin (usuarioDTO);
 			return ResponseEntity.ok(usuarioDTO);
 	}
 	@PatchMapping(path = "/update", consumes = "application/json")

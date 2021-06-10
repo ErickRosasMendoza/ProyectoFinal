@@ -4,7 +4,7 @@ import './assets/css/index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-import {BrowserRouter, Route, Switch, HashRouter} from 'react-router-dom';
+import { BrowserRouter, Route, Switch,HashRouter } from 'react-router-dom';
 
 import Error from './components/Error';
 import DirectorioAdmin from './components/DirectorioAdmin';
@@ -20,7 +20,7 @@ import SubirDictamen from './components/SubirDictamen';
 import SubirLiberacion from './components/SubirLiberacion';
 import SubirBaja from './components/SubirBaja';
 import SubirServicio from './components/SubirServicio';
-
+import CrearAlumno from './components/CrearAlumno';
 import DatosAlumno from './components/DatosAlumno';
 import MisDatosAlumno from './components/MisDatosAlumno';
 import DatosAdmin from './components/DatosAdmin';
@@ -37,77 +37,81 @@ import BuscarICE from './components/BuscarICE';
 import BuscarICA from './components/BuscarICA';
 import BuscarIE from './components/BuscarIE';
 import BuscarISISA from './components/BuscarISISA';
-
+import AlumnoServicio from './components/AlumnoServicio';
 import DirectorioArchivosAlumno from './components/DirectorioArchivosAlumno';
 import BuscarBoleta from './components/BuscarBoleta';
 import BuscarDictamenAlumnos from './components/BuscarDictamenAlumnos';
 import BuscarBajaAlumnos from './components/BuscarBajaAlumnos';
 import BuscarLiberacionAlumnos from './components/BuscarLiberacionAlumnos';
 import BuscarServicioAlumnos from './components/BuscarServicioAlumnos';
-import Default from "./components/Default";
+
 
 
 ReactDOM.render(
     <React.StrictMode>
-        <HashRouter basename={'/'}>
+         <HashRouter basename={'/'}>
+           
+         <Switch>
+                   
 
-            <Switch>
-                {/**RUTA DEFAULT QUE EVALUA HACIA DONDE SE REDIRIGE  */}
-                <Route exact path="/" component={Default}/>
+                     {/**RUTAS ADMINISTRADOR  */}
+                     
+{/**RUTA PRINCIPAL  */}<Route exact path = "/admin/MisDatosAdmin" component = {MisDatosAdmin}/>
+                    <Route exact path = "/admin/Lista" component = {ListaAlumnos}/>
+                    <Route exact path = "/admin/BuscarNombre" component ={BuscarAlumno}/>
+                    <Route exact path = "/admin/BuscarBoleta" component = {BuscarBoleta}/>
+                    <Route exact path = "/admin/Crearadmin" component = {CrearAdmin}/>
+                    <Route exact path = "/admin/BuscarICE" component = {BuscarICE}/>
+                    <Route exact path = "/admin/BuscarICA" component = {BuscarICA}/>
+                    <Route exact path = "/admin/BuscarIE" component = {BuscarIE}/>
+                    <Route exact path = '/admin/BuscarISISA' component = {BuscarISISA}/>
+                    <Route exact path = "/admin/BuscarDictamen" component = {BuscarDictamenAlumnos}/>
+                    <Route exact path = "/admin/BuscarBaja" component = {BuscarBajaAlumnos}/>
+                    <Route exact path = "/admin/BuscarLiberacion" component = {BuscarLiberacionAlumnos}/>
+                    <Route exact path = "/admin/BuscarServicio" component = {BuscarServicioAlumnos}/>
+                    <Route exact path = "/admin/DirectorioArchivosAlumno/:id" component = {DirectorioArchivosAlumno}/>
+                   
 
-                {/**RUTAS ADMINISTRADOR  */}
+                     {/**RUTAS USUARIO  */}
 
-                {/**RUTA PRINCIPAL  */}<Route exact path="/admin/MisDatosAdmin" component={MisDatosAdmin}/>
-                <Route exact path="/admin/Lista" component={ListaAlumnos}/>
-                <Route exact path="/admin/BuscarNombre" component={BuscarAlumno}/>
-                <Route exact path="/admin/BuscarBoleta" component={BuscarBoleta}/>
-                <Route exact path="/admin/Crearadmin" component={CrearAdmin}/>
-                <Route exact path="/admin/BuscarICE" component={BuscarICE}/>
-                <Route exact path="/admin/BuscarICA" component={BuscarICA}/>
-                <Route exact path="/admin/BuscarIE" component={BuscarIE}/>
-                <Route exact path='/admin/BuscarISISA' component={BuscarISISA}/>
-                <Route exact path="/admin/BuscarDictamen" component={BuscarDictamenAlumnos}/>
-                <Route exact path="/admin/BuscarBaja" component={BuscarBajaAlumnos}/>
-                <Route exact path="/admin/BuscarLiberacion" component={BuscarLiberacionAlumnos}/>
-                <Route exact path="/admin/BuscarServicio" component={BuscarServicioAlumnos}/>
-                <Route exact path="/admin/DirectorioArchivosAlumno/:id" component={DirectorioArchivosAlumno}/>
+{/*RUTA PRINCIPAL, falta poner el "user", PARA QUE NO TRUENE en el back */ }
+                    <Route exact path = "/MisDatosAlumno" component = {MisDatosAlumno}/> 
 
+                    <Route exact path = "/user/CrearDictamen" component = {Dictamen}/>
+                    <Route exact path = "/user/CrearLiberacion" component = {Liberacion}/>
+                    <Route exact path = "/user/CrearBaja" component = {Baja}/>
+                    <Route exact path = "/user/CrearServicio" component = {ServicioSocial}/>
 
-                {/**RUTAS USUARIO  */}
+                    {/**esta ruta lleva a llenar un frmulario de nuevo usuario */} 
+                    <Route exact path = "/DatosAlumno" component = {DatosAlumno}/>
 
-                {/*RUTA PRINCIPAL, falta poner el "user", PARA QUE NO TRUENE en el back */}
-                <Route exact path="/user/MisDatosAlumno" component={MisDatosAlumno}/>
+                   
+                     {/**RUTAS PARA LOS DOCUMENTOS, LAS COMPARTEN AMBAS PARTES  */}
+                   
+                    <Route exact path = "/DocDictamen/:doc" component = {DocDictamen}/>
+                    <Route exact path = "/DocLiberacion/:doc" component = {DocLiberacion}/>
+                    <Route exact path = "/DocBaja/:doc" component = {DocBaja}/>
+                    <Route exact path = "/DocServicio/:doc" component = {DocServicio}/>
 
-                <Route exact path="/user/CrearDictamen" component={Dictamen}/>
-                <Route exact path="/user/CrearLiberacion" component={Liberacion}/>
-                <Route exact path="/user/CrearBaja" component={Baja}/>
-                <Route exact path="/user/CrearServicio" component={ServicioSocial}/>
+                    <Route exact path = "/PdfDictamen/:doc" component = {PdfDictamen}/>
+                    <Route exact path = "/PdfBaja/:doc" component = {PdfBaja}/>
+                    <Route exact path = "/PdfLiberacion/:doc" component = {PdfLiberacion}/>
+                    <Route exact path = "/PdfServicio/:doc" component = {PdfServicio}/>
+                   
+                    {/**esta ruta lleva a llenar un frmulario de nuevo usuario */} 
+                    <Route exact path = "/DatosAlumno" component = {DatosAlumno}/>
 
-                {/**esta ruta lleva a llenar un frmulario de nuevo usuario */}
-                <Route exact path="/user/DatosAlumno" component={DatosAlumno}/>
+                    {/*falta poner el "user" como default en el back */ }
+                    <Route exact path = "/MisDatosAlumno" component = {MisDatosAlumno}/>  
+                   
+                    <Route component={Error} />
+                    <Route exact path = "/AlumnoServicio/:id" component = {AlumnoServicio}/>
+                    
+                </Switch>
 
-
-                {/**RUTAS PARA LOS DOCUMENTOS, LAS COMPARTEN AMBAS PARTES  */}
-
-                <Route exact path="/doc/DocDictamen/:doc" component={DocDictamen}/>
-                <Route exact path="/doc/DocLiberacion/:doc" component={DocLiberacion}/>
-                <Route exact path="/doc/DocBaja/:doc" component={DocBaja}/>
-                <Route exact path="/doc/DocServicio/:doc" component={DocServicio}/>
-
-                <Route exact path="/doc/PdfDictamen/:doc" component={PdfDictamen}/>
-                <Route exact path="/doc/PdfBaja/:doc" component={PdfBaja}/>
-                <Route exact path="/doc/PdfLiberacion/:doc" component={PdfLiberacion}/>
-                <Route exact path="/doc/PdfServicio/:doc" component={PdfServicio}/>
-
-                {/**esta ruta lleva a llenar un frmulario de nuevo usuario */}
-
-                <Route component={Error}/>
-                
-
-            </Switch>
-
-
-        </HashRouter>
+        
+            
+         </HashRouter>
     </React.StrictMode>,
     document.getElementById('root')
 );

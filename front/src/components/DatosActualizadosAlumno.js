@@ -56,7 +56,7 @@ class DatosActualizadosAlumno extends React.Component {
             if (this.state.alumno.apellidoPaterno && this.state.alumno.apellidoPaterno !== null && this.state.alumno.apellidoPaterno !== undefined) {
                 if (this.state.alumno.apellidoMaterno && this.state.alumno.apellidoMaterno !== null && this.state.alumno.apellidoMaterno !== undefined) {
                     if (this.state.alumno.boleta.length === 10) {
-                       
+                        alert(this.state.alumno.idAlumno);
                         axios.patch("alumno/update", this.state.alumno)
                             .then(res => {
                                 this.setState({

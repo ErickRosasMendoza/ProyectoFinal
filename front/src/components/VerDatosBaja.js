@@ -151,7 +151,7 @@ class VerDatosBaja extends React.Component{
                                         <React.Fragment>
                                         <a id="state_rejected">RECHAZADO</a>
                                         <div>
-                                            <strong>Seguimiento</strong> {this.state.tipoBaja.revisado}
+                                            <strong>Fecha de Registro:</strong> {this.state.tipoBaja.revisado}
                                         </div>
                                         </React.Fragment> 
                                     )

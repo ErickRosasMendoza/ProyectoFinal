@@ -155,7 +155,7 @@
                         <phase>generate-resources</phase>
                         <configuration>
                             <target>
-                                <copy todir="${project.build.outputDirectory}/public">
+                                <copy todir="${project.build.outputDirectory}/static">
                                     <fileset dir="${project.basedir}/front/build"/>
                                 </copy>
                             </target>

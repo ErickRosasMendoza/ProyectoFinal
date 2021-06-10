@@ -103,7 +103,11 @@ render() {
                                                 <tr>
                                                     <td className="table_lista">{lista1.nombreDoc}</td>
                                                     <td className="table_lista">{lista1.comentario}</td>
+<<<<<<< HEAD
                                                     <td><Link to={'/PdfDictamen/' + lista1.idDoc}target="_blank" id="btn_watch">Visualizar</Link></td>
+=======
+                                                    <td><Link to={'/doc/PdfDictamen/' + lista1.idDoc}target="_blank" id="btn_watch">Visualizar</Link></td>
+>>>>>>> parent of cbc74a8... Update SubirDictamen.js
                                                     <td><a download href={ "http://localhost:8080/docDictamen/getDoc/" + lista1.idDoc}  id="btn_downLoad">Descargar</a></td>
                                                     <td><BorrarDoc
                                                     idLista={lista1.idLista}

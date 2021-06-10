@@ -12,12 +12,10 @@ import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-import lombok.Data;
 
 
 
-
-@Data
+//@Data
 @Entity
 @Table(name="cliente")
 public class Cliente implements Serializable{

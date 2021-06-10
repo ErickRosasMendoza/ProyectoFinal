@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import HeaderDEyAE from './HeaderDEyAE';
 import axios from 'axios';
 import DirectorioAlumno from './DirectorioAlumno';
-import Footer from './Footer';
+
 import Cookies from 'universal-cookie';
 import SubirServicio from './SubirServicio';
 import VerDatosServicio from './VerDatosServicio';
@@ -101,7 +101,6 @@ class ServicioSocial extends React.Component {
                           </div>
                           <SubirServicio/>
                           <VerDatosServicio/>
-                          <Footer/>
             </div>
         );
     }

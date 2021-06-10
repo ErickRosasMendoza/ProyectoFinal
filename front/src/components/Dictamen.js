@@ -4,11 +4,10 @@ import axios from 'axios';
 import HeaderDEyAE from './HeaderDEyAE';
 import { Link } from 'react-router-dom';
 import DirectorioAlumno from './DirectorioAlumno';
-import Footer from './Footer';
+
 import SubirDictamen from './SubirDictamen';
 import VerDatosDictamen from './VerDatosDictamen';
 import Cookies from 'universal-cookie';
-
 
 
 const cookies = new Cookies();
@@ -118,11 +117,7 @@ class Dictamen extends React.Component {
                          
                           <SubirDictamen/>
                           <VerDatosDictamen/>
-                          <Footer/>
-              
             </div>
-           
-           
         );
          
         

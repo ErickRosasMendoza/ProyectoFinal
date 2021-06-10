@@ -42,11 +42,15 @@ class DatosActualizadosEmail extends React.Component {
         
         this.setState({
             usuario: {
-                idUsuario: cookies.get('idUsuario'),
+               // idUsuario: cookies.get('idUsuario'),
+               
                 password: this.contraseñaRef.current.value,
+                
                 password2: this.nuevaContraseñaRef.current.value,
-                confirmPassword:this.confirmarNuevaContraseña.current.value,
 
+                confirmPassword:this.confirmarNuevaContraseña.current.value,
+                idUsuario: 95,
+                // idUsuario: cookies.get('idUsuario'),
 
             },
        
@@ -55,6 +59,9 @@ class DatosActualizadosEmail extends React.Component {
     }//Fin de changeState
 
     update = () => {
+        //this.changeState();
+    
+        //console.log(this.state.usuario.password + "fuera del  orimer  ")
             if(this.state.usuario.password==!undefined || this.state.usuario.password.length >= 6){
                 console.log(this.state.usuario.password + "dentro del segundo  ")
                 if(this.state.usuario.password2.length >= 6 || this.state.usuario.password2 ==! undefined){

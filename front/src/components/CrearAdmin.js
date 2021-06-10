@@ -54,7 +54,7 @@ class CrearAdmin extends React.Component {
                 if(this.state.statusContraseña.length){
                  try{
                     console.log(this.state.contraseña + " contraseña dentro del if")
-                    axios.post("usuario/saveAdmin", this.state.usuario)
+                    axios.post("usuario/save", this.state.usuario)
                     .then(res =>{
                         this.setState({
                             status:true,

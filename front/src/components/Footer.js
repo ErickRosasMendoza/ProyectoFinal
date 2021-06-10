@@ -6,9 +6,9 @@ import React from 'react';
         return(
             <footer id="footer">
 			<div className="center">
-				
-					ESIMEZ
-				
+				<p>
+					&copy;ESIMEZ
+				</p>
 			</div>
 		</footer>
 

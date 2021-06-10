@@ -4,7 +4,7 @@ import './assets/css/index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-import {BrowserRouter, Route, Switch, HashRouter} from 'react-router-dom';
+import { BrowserRouter, Route, Switch,HashRouter } from 'react-router-dom';
 
 import Error from './components/Error';
 import DirectorioAdmin from './components/DirectorioAdmin';
@@ -44,7 +44,7 @@ import BuscarDictamenAlumnos from './components/BuscarDictamenAlumnos';
 import BuscarBajaAlumnos from './components/BuscarBajaAlumnos';
 import BuscarLiberacionAlumnos from './components/BuscarLiberacionAlumnos';
 import BuscarServicioAlumnos from './components/BuscarServicioAlumnos';
-import Default from "./components/Default";
+
 
 
 ReactDOM.render(

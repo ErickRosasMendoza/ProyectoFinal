@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import BorrarAlumno from './BorrarAlumno';
 import { Link } from 'react-router-dom';
 
 import DirectorioAdmin from './DirectorioAdmin';
@@ -27,10 +26,7 @@ class ListaAlumnos extends Component{
                 console.log(this.state.alumnos);
             });
     }
-    eliminarAlumno = () =>{
-        alert("hola")
-        axios.delete("usuario/delete" + this.alumno.idAlumno )
-    }
+
     
 render() {
     if(this.state.alumnos.length >=1){
@@ -53,8 +49,6 @@ render() {
                         <td className="table_lista">{alumno.boleta}</td> 
                         <td className="table_lista">{alumno.programaAcademico}</td>
                         <td><Link to={'/admin/DirectorioArchivosAlumno/' + alumno.idAlumno} id="btn_watch">Ver Archivos</Link></td>
-                        <td><BorrarAlumno
-                        id = {alumno.idAlumno}/></td>
                     </tr>
                 </tbody>
                 )

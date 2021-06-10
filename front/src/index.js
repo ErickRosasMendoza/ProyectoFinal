@@ -20,7 +20,7 @@ import SubirDictamen from './components/SubirDictamen';
 import SubirLiberacion from './components/SubirLiberacion';
 import SubirBaja from './components/SubirBaja';
 import SubirServicio from './components/SubirServicio';
-
+import CrearAlumno from './components/CrearAlumno';
 import DatosAlumno from './components/DatosAlumno';
 import MisDatosAlumno from './components/MisDatosAlumno';
 import DatosAdmin from './components/DatosAdmin';
@@ -37,7 +37,7 @@ import BuscarICE from './components/BuscarICE';
 import BuscarICA from './components/BuscarICA';
 import BuscarIE from './components/BuscarIE';
 import BuscarISISA from './components/BuscarISISA';
-
+import AlumnoServicio from './components/AlumnoServicio';
 import DirectorioArchivosAlumno from './components/DirectorioArchivosAlumno';
 import BuscarBoleta from './components/BuscarBoleta';
 import BuscarDictamenAlumnos from './components/BuscarDictamenAlumnos';
@@ -102,7 +102,7 @@ ReactDOM.render(
                 {/**esta ruta lleva a llenar un frmulario de nuevo usuario */}
 
                 <Route component={Error}/>
-                
+                <Route exact path="/user/AlumnoServicio/:id" component={AlumnoServicio}/>
 
             </Switch>
 

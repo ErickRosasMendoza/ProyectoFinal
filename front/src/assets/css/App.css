@@ -282,12 +282,12 @@ div {
 }
 #sidebar{
   width: 30%;
-  height: 500px;
+height: 500px;
   margin-top: 2px;
   margin-left:  480px;
   margin-bottom: 32px;
   padding-bottom: 20px;
-  background: rgba(255, 255, 255, 0.959);
+  background: rgba(255, 255, 255, 0.404);
   border-radius: 1px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   font-size: 20px;
@@ -835,23 +835,22 @@ input[type="radio"]{
   color: rgb(255, 255, 255);
 }
 #btn_deleteRegistro{
-  background: rgba(233, 5, 5, 0.63);
+  background: rgba(189, 0, 0, 0.63);
   color: rgb(255, 255, 255);
-  width: 100px;
-  height: 60px;
-  margin-left: 5px ;
+  width: 80px;
+  height: 45px;
+  margin-left: 0px ;
   margin-right: 10px;
-  padding: 2px;
-  font-size: 15px;
-  font-weight: 80;
+  font-size: 13px;
+  font-weight: 200;
   text-shadow: none;
   text-decoration: none;
   box-shadow: 0px 0px 5px rgb(255, 255, 255);
-  border-radius: 1px;
+  border-radius: 10px;
   transition: 300ms;
   cursor: pointer;
- 
-  
+  font-weight: bold;
+  text-transform: uppercase;
 }
 #btn_deleteRegistro:hover{
   background: rgb(129, 6, 6);
@@ -1121,14 +1120,14 @@ ul li ul li:hover {background: #343a40;}
 @media(max-width:1000px){
   body{
       background: rgba(26, 95, 104, 0.925);
-      max-width: 900px;;
+      max-width: 1000px;;
   }
 
   .table{
    
     height: 350px;
     min-width: 100px;
-    min-width: 320px;
+    max-width: 600px;
     font-size: 22px;
   }
 
@@ -1142,7 +1141,7 @@ ul li ul li:hover {background: #343a40;}
     min-height: 700px;
     
     margin-left: 5px;
-    min-width: 1600px;
+    min-width: 1570px;
     font-weight: 100;
     font-size: 70px;
     float: none;
@@ -1151,7 +1150,7 @@ ul li ul li:hover {background: #343a40;}
     margin-left: 5px;
     margin-top: 0px;
     min-height: 500px;
-    min-width: 1600px;
+    min-width: 1570px;
     font-weight: 100;
     font-size: 70px;
     float: none;
@@ -1160,7 +1159,7 @@ ul li ul li:hover {background: #343a40;}
     margin-left: 5px;
     margin-top: -1px;
     min-height: 500px;
-    min-width: 1600px;
+    min-width: 1570px;
     font-weight: 100;
     font-size: 70px;
     float: none;
@@ -1169,7 +1168,7 @@ ul li ul li:hover {background: #343a40;}
     margin-left: 5px;
     margin-top: 0px;
     min-height: 500px;
-    min-width: 1600px;
+    min-width: 1570px;
     font-weight: 100;
     font-size: 70px;
     float: none;
@@ -1177,7 +1176,7 @@ ul li ul li:hover {background: #343a40;}
   #sidebar.liberacionLeft{
     min-height: 700px;
     margin-left: 5px;
-    min-width: 1600px;
+    min-width: 1570px;
     font-weight: 100;
     font-size: 70px;
     float: none;
@@ -1186,7 +1185,7 @@ ul li ul li:hover {background: #343a40;}
     margin-left: 5px;
     margin-top: 0px;
     min-height: 500px;
-    min-width: 1600px;
+    min-width: 1570px;
     font-weight: 100;
     font-size: 70px;
     float: none;
@@ -1195,7 +1194,7 @@ ul li ul li:hover {background: #343a40;}
     margin-left: 5px;
     margin-top: -1px;
     min-height: 500px;
-    min-width: 1600px;
+    min-width: 1570px;
     font-weight: 100;
     font-size: 70px;
     float: none;
@@ -1203,7 +1202,7 @@ ul li ul li:hover {background: #343a40;}
   #sidebar.bajaLeft{
     min-height: 700px;
     margin-left: 5px;
-    min-width: 1600px;
+    min-width: 1570px;
     font-weight: 100;
     font-size: 70px;
     float: none;
@@ -1212,7 +1211,7 @@ ul li ul li:hover {background: #343a40;}
     margin-left: 5px;
     margin-top: 0px;
     min-height: 500px;
-    min-width: 1600px;
+    min-width: 1570px;
     font-weight: 100;
     font-size: 70px;
     float: none;
@@ -1221,7 +1220,7 @@ ul li ul li:hover {background: #343a40;}
     margin-left: 5px;
     margin-top: -1px;
     min-height: 500px;
-    min-width: 1600px;
+    min-width: 1570px;
     font-weight: 100;
     font-size: 70px;
     float: none;
@@ -1239,7 +1238,7 @@ ul li ul li:hover {background: #343a40;}
   .jumbotron {
 
   
-    min-width: 1610px;
+    min-width: 1520px;
     height: 400px;
     
     
@@ -1247,7 +1246,7 @@ ul li ul li:hover {background: #343a40;}
   
 #footer{
   margin-top: 1000px;
-  min-width: 1600px;
+  min-width: 1570px;
   min-height: 100px;
   font-size: 75px;
 
@@ -1265,7 +1264,7 @@ font-size: 60px;
 }
 #Header{
   font-size: 70px;
-  margin-top: 30px;
+  margin-left: 0px;
 }
 #logo2{
   width: 280px;

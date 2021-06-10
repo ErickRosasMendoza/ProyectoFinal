@@ -182,7 +182,7 @@ public class UsuarioServiceImpl implements UsuarioService{
 
     @Override
     public void deleteUsuario(Long idUsuario) throws EmptyResultException {
-    
+        // TODO Auto-generated method stub
         usuarioRepository.deleteById(idUsuario);
     }
 
